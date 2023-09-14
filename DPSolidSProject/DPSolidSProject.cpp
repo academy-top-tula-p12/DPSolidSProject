@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "PrincipleO.h"
 #include "PrincipleL.h"
+#include "PrincipleD.h"
 
 void TestRectangle(Rectangle* rect)
 {
@@ -55,8 +56,16 @@ int main()
     std::cout << "\n";
     */
 
-    Account* acc = new MicroAccaunt();
+    //Account* acc = new MicroAccaunt();
     //InitAccount(acc);
-    CalcInterest(acc);
+    //CalcInterest(acc);
 
+
+    Book* book = new Book();
+    book->Text() = "Hello world";
+
+    book->Printer() = new PrinterConsole();
+    book->Print();
+    book->Printer() = new PrinterHtml();
+    book->Print();
 }
